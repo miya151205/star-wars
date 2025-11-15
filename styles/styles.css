@@ -1,1 +1,148 @@
 /* aca iran todos los estilos */
+
+.orbitron-uniquifier> {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight (400,900);
+  font-style: normal;
+  font-size: 1em;
+}
+body {
+    background-image: url('../assets/fondo.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+header {
+    display: flex;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #dfdede;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    .container {
+    width: 18.75rem;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    background:rgba(27, 27, 27, 0.9);
+    border-radius: 0.938rem;
+    border: 2px solid #00f2ff;
+    color: #b9f7ff;
+    box-shadow: 0 0 15px #00f2ff;
+}
+.logo img {
+    width: 5.625rem;
+    display: block;
+     margin: inherit;
+}
+
+    
+h2 {
+    margin: 5px 0;
+    color: #00f2ff;
+}
+
+.sub {
+    margin-bottom: 15px;
+    color: #00f2ff;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #00f2ff;
+    background: #0e0e0e;
+    color: #d4fcff;
+    outline: none;
+}
+
+.sables {
+    display: grid;
+    grid-template-columns: 9rem 9rem;
+}
+
+textarea {
+    height: auto;
+    resize: none;
+}
+
+.niveles button {
+    background: #0e0e0e;
+    border: 2px solid #00e4ff;
+    color: #b9f7ff;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.niveles button:hover {
+    background: #00e4ff;
+    color: #000;
+}
+
+.sabers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.s-item {
+    border: 2px solid #00f2ff;
+    padding: 8px;
+    border-radius: 8px;
+    width: 120px;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.full {
+    width: 100%;
+}
+
+.enviar {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #000;
+    color: #00f2ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: #00f2ff;
+}
+
+.nota {
+    font-size: 11px;
+    text-align:left;
+    color: #00f2ff;
+    margin-top: 15px;
+}

@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia Jedi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="assets/logo.svg" alt="Star Wars" class="logo" />
+        <div>
+          <h2>Academia Jedi</h2>
+          <p class="sub">Que la Fuerza te acompañe!</p>
+        </div>
+      </header>
+
+      <label>Nombre del Aprendiz</label>
+      <input type="text" placeholder="Introduce tu nombre aquí" />
+
+      <label>Especie</label>
+      <select>
+        <option>Humano</option>
+        <option>Twi'lek</option>
+        <option>Zabrak</option>
+        <option>Wookiee</option>
+        <option>Jawa</option>
+        <option>Chiss</option>
+        <option>Mon Calamari</option>
+        <option>Rodiano</option>
+        <option>Other</option>
+      </select>
+      <p>selecciona tu especie</p>
+
+      <label>Edad</label>
+      <input type="number" placeholder="Introduce tu edad" />
+
+      <label>Planeta de Origen</label>
+      <input type="text" placeholder="Introduce tu planeta de origen" />
+
+      <label>Nivel de Conexión con la Fuerza</label>
+      <div class="niveles">
+        <button>Bajo</button>
+        <button>Medio</button>
+        <button>Alto</button>
+      </div>
+      <label>Selección de Sables de Luz Preferidos</label>
+      <div class="sables">
+        <label class="item"><input type="checkbox" /> Azul</label>
+        <label class="item"><input type="checkbox" /> Verde</label>
+        <label class="item"><input type="checkbox" /> Morado</label>
+        <label class="item"><input type="checkbox" /> Rojo</label>
+        <label class="item full"><input type="checkbox" /> Doble Hoja</label>
+      </div>
+      <label>Comentarios Adicionales</label>
+      <textarea placeholder="Escribe tus comentarios aquí..."></textarea>
+
+      <button class="enviar">Enviar solicitud al Consejo Jedi</button>
+
+      <p class="nota">Nota<br />Bienvenido a tu nuevo camino</p>
+    </div>
+  </body>
 </html>
