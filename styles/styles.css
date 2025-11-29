@@ -1,148 +1,206 @@
 /* aca iran todos los estilos */
 
-.orbitron-uniquifier> {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight (400,900);
-  font-style: normal;
-  font-size: 1em;
+:root {
+  --primary-color: rgba(0, 242, 255, 1);
+  --primary-color-trans: rgba(0, 242, 255, 0.7);
+  --bg-dark:rgba(13, 13, 13, 1);
+  --bg-color:rgba(10, 10, 10, 0.85);
+  
 }
-body {
-    background-image: url('../assets/fondo.svg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+*{
+    font-family: "Orbitron", sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    position: relative;
-    z-index: 1;
+body{
+    color: var(--primary-color);
+    background-image: url("/assets/bg.png");
 }
-header {
+
+.container{
+    background: var(--bg-color);
+    max-width: 320px;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 0.75rem;
+}
+
+h1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+h2,p{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--primary-color-trans);
+    margin: 0.2rem;
+}
+
+
+header{
     display: flex;
+    place-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
-body {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #dfdede;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+image{
+    width: 56px;
+    height: 56px;
 }
 
-    .container {
-    width: 18.75rem;
-    padding: 1.25rem;
-    margin-top: 1.25rem;
-    background:rgba(27, 27, 27, 0.9);
-    border-radius: 0.938rem;
-    border: 2px solid #00f2ff;
-    color: #b9f7ff;
-    box-shadow: 0 0 15px #00f2ff;
-}
-.logo img {
-    width: 5.625rem;
-    display: block;
-     margin: inherit;
+form{
+    width: 296px;
+    margin: auto;
 }
 
-    
-h2 {
-    margin: 5px 0;
-    color: #00f2ff;
-}
-
-.sub {
-    margin-bottom: 15px;
-    color: #00f2ff;
+input,select{
+    background: var(--bg-dark);
+    padding: 0.5rem;
+    border: 2px solid var(--primary-color-trans);
+    border-radius: 6px;
+    color: var(--primary-color-trans);
 }
 
 label {
-    display: block;
-    font-size: 13px;
-    margin-top: 10px;
+    margin: 0.4rem 0;
 }
 
-input, select, textarea {
-    width: 100%;
-    margin-top: 5px;
-    padding: 8px;
-    border-radius: 8px;
-    border: 2px solid #00f2ff;
-    background: #0e0e0e;
-    color: #d4fcff;
+input::placeholder,option {
+    font-weight: 400;
+    color: var(--primary-color-trans);
+}
+input:focus,select{
     outline: none;
 }
-
-.sables {
-    display: grid;
-    grid-template-columns: 9rem 9rem;
+.container_input {
+  display: grid;
+    margin: 0.5rem 0;
 }
 
-textarea {
-    height: auto;
-    resize: none;
+.full-width {
+    grid-column: 1 / -1;
 }
 
-.niveles button {
-    background: #0e0e0e;
-    border: 2px solid #00e4ff;
-    color: #b9f7ff;
-    padding: 5px 10px;
-    margin: 5px 5px 0 0;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.niveles button:hover {
-    background: #00e4ff;
-    color: #000;
-}
-
-.sabers {
+/* Estilos para los botones de nivel de poder */
+.power-options {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 5px;
+    gap: 0.5rem;
 }
 
-.s-item {
-    border: 2px solid #00f2ff;
-    padding: 8px;
-    border-radius: 8px;
-    width: 120px;
-    background: #0e0e0e;
+.power-options input[type="radio"] {
+    display: none; /* Ocultar el radio button */
+}
+
+.power-options label {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background:transparent;
+    border: 2px solid var(--bg-dark);
+    border-radius: 6px;
+    color: var(--primary-color-trans);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.power-options label:hover {
+    background:rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.power-options input[type="radio"]:checked + label {
+    background: var(--bg-dark);
+    color: var(--primary-color-trans);
+    border-color: var(--bg-dark);
+}
+.sable{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
+    padding: 0.65rem;
+    width: 9rem;
+    border: 1px solid rgba(136, 204, 238, 0.5);
+    border-radius: 6px;
 }
 
-.full {
+.container_sables{
+    display: grid;
+    grid-template-columns: 9rem 9rem;
+    gap: 0.4rem;
+    justify-items: center;
+    align-items: center;
+}
+.sable:nth-child(1)>input[type="checkbox"]:checked::after {
+    background: blue;
+    
+}
+.sable:nth-child(2)>input[type="checkbox"]:checked::after {
+    background: green;
+    
+}
+.sable:nth-child(3)>input[type="checkbox"]:checked::after {
+    background: purple;
+    
+}
+.sable:nth-child(4)>input[type="checkbox"]:checked::after {
+    background: red;
+    
+}
+.sable:nth-child(5) {
+    grid-column: 1 / -1;
     width: 100%;
 }
 
-.enviar {
-    width: 100%;
-    margin-top: 15px;
-    padding: 10px;
-    background: #000;
-    color: #00f2ff;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
+.sable input[type="checkbox"] {
+    appearance: none;
+    width: 1.167rem;
+    height: 1.167rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
     cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
 }
 
-.enviar:hover {
-    background: #00f2ff;
+.sable input[type="checkbox"]:checked {
+    background: var(--primary-color);
 }
 
-.nota {
-    font-size: 11px;
-    text-align:left;
-    color: #00f2ff;
-    margin-top: 15px;
+.sable input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.sable label {
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+button {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+footer{
+    margin-top: 1rem;
+}
+footer p{
+    font-size: 0.75rem;
 }
